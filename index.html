@@ -133,6 +133,35 @@ nav .innen{display:flex;align-items:center;gap:20px;padding-block:12px;flex-wrap
 .zahl{font-variant-numeric:tabular-nums}
 .erinnerung{background:var(--band);border-radius:10px;padding:10px 12px;font-size:14px}
 
+/* Mappen */
+.mappen{display:flex;flex-direction:column;gap:32px}
+.mappen-text{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.mappen-text .punkt{display:flex;gap:12px}
+.mappen-text .punkt b{display:block;color:var(--text)}
+.mappen-text .punkt p{color:var(--text-leise)}
+.mappen-text .marke-nr{flex:none;width:28px;height:28px;border-radius:8px;background:var(--band);color:var(--blau);display:grid;place-items:center;font-weight:700;font-size:15px}
+.netz{width:100%;height:auto;display:block}
+.netz .k rect{fill:var(--flaeche);stroke:var(--linie);stroke-width:1.5}
+.netz .k .art{fill:var(--text-leise);font-size:12px;letter-spacing:.8px;text-transform:uppercase;font-weight:700}
+.netz .k .name{fill:var(--text);font-size:17px;font-weight:600}
+.netz .k.haupt rect{fill:var(--kachel);stroke:var(--kachel)}
+.netz .k.haupt .art{fill:var(--auf-kachel);opacity:.8}
+.netz .k.haupt .name{fill:var(--auf-kachel)}
+.netz .doc rect{fill:var(--akzent);stroke:none}
+.netz .doc text{fill:#1A2433;font-size:11px;font-weight:700}
+.netz .v{stroke:var(--blau);stroke-width:2;fill:none;opacity:.7}
+.netz .v.bezug{stroke-dasharray:6 6}
+.netz .vt{fill:var(--text-leise);font-size:13px}
+.netz-rahmen{background:var(--flaeche);border:1px solid var(--linie);border-radius:18px;padding:24px 32px}
+.baum{display:none;list-style:none;margin:0;padding:0;font-size:16px}
+.baum ul{list-style:none;margin:6px 0 0 18px;padding:0 0 0 14px;border-left:2px solid var(--linie)}
+.baum li{margin:6px 0}
+.baum span{display:inline-block;background:var(--flaeche);border:1px solid var(--linie);border-radius:10px;padding:6px 12px}
+.baum small{display:block;color:var(--text-leise);font-size:12px;text-transform:uppercase;letter-spacing:.8px;font-weight:700}
+.baum > li > span{background:var(--kachel);color:var(--auf-kachel);border-color:var(--kachel)}
+.baum > li > span small{color:var(--auf-kachel);opacity:.8}
+@media (max-width:900px){.mappen-text{grid-template-columns:1fr}.netz{display:none}.netz-legende{display:none}.baum{display:block}.netz-rahmen{padding:16px}}
+
 /* Offen */
 .offen{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
 .liste{display:flex;flex-direction:column;gap:14px}
@@ -326,7 +355,57 @@ footer a{color:var(--text-leise)}
           </div>
         </div>
       </div>
-      <p class="hinweis">Vereinfachte Darstellung mit Beispieldaten. Bildschirmfotos der echten Oberfläche folgen.</p>
+      <p class="hinweis">Vereinfachte Darstellung mit Beispieldaten.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="mappen-titel">
+    <div class="innen">
+      <div class="kopfzeile">
+        <p class="vorspann">Mappen statt Ordner</p>
+        <h2 id="mappen-titel">Alles hängt zusammen, so wie im echten Leben</h2>
+      </div>
+      <div class="mappen">
+        <div class="mappen-text">
+          <div class="punkt"><span class="marke-nr">1</span><p><b>Jede Sache bekommt eine Mappe.</b>Das Haus, die Heizung, der Wartungsvertrag, die Rechnung. Jede Mappe weiß, was sie ist, und hat passende Felder und Fristen.</p></div>
+          <div class="punkt"><span class="marke-nr">2</span><p><b>Mappen verweisen aufeinander.</b>Die Rechnung gehört zum Wartungsvertrag, der Vertrag zur Heizung, die Heizung zum Haus. Kein Dokument liegt doppelt.</p></div>
+          <div class="punkt"><span class="marke-nr">3</span><p><b>Von überall findest du alles.</b>Öffnest du das Haus, siehst du Heizung, Verträge und Rechnungen. Öffnest du Lena, siehst du alles, was sie betrifft.</p></div>
+        </div>
+        <div class="netz-rahmen"><svg class="netz" viewBox="0 0 1000 430" role="img" aria-labelledby="netz-titel netz-text">
+<title id="netz-titel">Beispiel: verbundene Mappen rund um das Haus</title>
+<desc id="netz-text">Die Mappe Unser Haus ist mit der Heizung verbunden, die Heizung mit dem Wartungsvertrag, der Wartungsvertrag mit der Rechnung. Die Gebäudeversicherung gehört zum Haus, Lena ist Versicherungsnehmerin. Die Rechnung stammt vom Heizungsbau Beispiel.</desc>
+<path class="v" d="M700 72 C 620 72, 620 190, 600 190"/>
+<path class="v" d="M805 175 L805 104"/>
+<path class="v" d="M805 310 L805 239"/>
+<path class="v" d="M250 330 C 330 330, 330 222, 390 222"/>
+<path class="v bezug" d="M145 310 L145 136"/>
+<path class="v bezug" d="M700 358 C 560 358, 560 392, 520 392"/>
+<text class="vt" x="606" y="140" text-anchor="end">gehört zum Haus</text>
+<text class="vt" x="815" y="145">für die Heizung</text>
+<text class="vt" x="815" y="280">zum Vertrag</text>
+<text class="vt" x="338" y="306">versichert</text>
+<text class="vt" x="155" y="230">Versicherungs-</text><text class="vt" x="155" y="247">nehmerin</text>
+<text class="vt" x="560" y="416">Absender</text>
+<g class="k"><rect x="40" y="72" width="210" height="64" rx="12"/><text class="art" x="56" y="96">Person</text><text class="name" x="56" y="120">Lena</text></g>
+<g class="k"><rect x="40" y="310" width="210" height="64" rx="12"/><text class="art" x="56" y="334">Versicherung</text><text class="name" x="56" y="358">Gebäudeversicherung</text></g>
+<g class="k haupt"><rect x="390" y="190" width="210" height="64" rx="12"/><text class="art" x="406" y="214">Haus</text><text class="name" x="406" y="238">Unser Haus</text></g>
+<g class="k"><rect x="700" y="40" width="210" height="64" rx="12"/><text class="art" x="716" y="64">Anlage</text><text class="name" x="716" y="88">Heizung</text></g>
+<g class="k"><rect x="700" y="175" width="210" height="64" rx="12"/><text class="art" x="716" y="199">Vertrag</text><text class="name" x="716" y="223">Wartungsvertrag</text></g>
+<g class="k"><rect x="700" y="310" width="210" height="64" rx="12"/><text class="art" x="716" y="334">Rechnung</text><text class="name" x="716" y="358">Wartung 2026</text></g>
+<g class="k"><rect x="310" y="360" width="210" height="64" rx="12"/><text class="art" x="326" y="384">Organisation</text><text class="name" x="326" y="408">Heizungsbau Beispiel</text></g>
+<g class="doc"><rect x="866" y="185" width="34" height="20" rx="5"/><text x="873" y="199">PDF</text></g><g class="doc"><rect x="866" y="320" width="34" height="20" rx="5"/><text x="873" y="334">PDF</text></g><g class="doc"><rect x="206" y="320" width="34" height="20" rx="5"/><text x="213" y="334">PDF</text></g>
+</svg>
+<ul class="baum" aria-label="Beispiel: verbundene Mappen rund um das Haus">
+<li><span><small>Haus</small>Unser Haus</span>
+<ul>
+<li><span><small>Anlage</small>Heizung</span>
+<ul><li><span><small>Vertrag</small>Wartungsvertrag</span>
+<ul><li><span><small>Rechnung</small>Wartung 2026</span> <span><small>Absender</small>Heizungsbau Beispiel</span></li></ul></li></ul></li>
+<li><span><small>Versicherung</small>Gebäudeversicherung</span>
+<ul><li><span><small>Versicherungsnehmerin</small>Lena</span></li></ul></li>
+</ul></li></ul></div>
+      </div>
+      <p class="hinweis netz-legende">Durchgezogene Linie: gehört dazu. Gestrichelt: hat Bezug zu. Orange Markierung: Dokument in der Mappe.</p>
     </div>
   </section>
 
