@@ -20,7 +20,7 @@ The folder [`marke/`](marke/README.en.md) holds all logo files, colours and usag
 
 ## Status
 
-First draft, German only for now. An English version (`/en/`), pages per audience, imprint and privacy notice, and packages loaded live from the catalog will follow.
+Live at **https://ablago.app** (German) and **https://ablago.app/en/** (English), with legal notice, privacy notice and `/.well-known/security.txt`. Planned: pages per audience and packages loaded live from the catalog.
 
 ## License
 

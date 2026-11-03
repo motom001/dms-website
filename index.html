@@ -12,6 +12,11 @@
 <meta property="og:title" content="Ablago">
 <meta property="og:description" content="Deine Unterlagen kümmern sich um sich selbst und melden sich, wenn du sie brauchst.">
 <meta property="og:image" content="https://ablago.app/bilder/ablago-512.png">
+<meta property="og:url" content="https://ablago.app/">
+<link rel="canonical" href="https://ablago.app/">
+<link rel="alternate" hreflang="de" href="https://ablago.app/">
+<link rel="alternate" hreflang="en" href="https://ablago.app/en/">
+<link rel="alternate" hreflang="x-default" href="https://ablago.app/">
 <style>
 /* Layout: ruhige, helle Seite; eine breite Spalte (max. 1120px), Abschnitte als Bänder, Kopf mit fallendem Blatt als einziger Bewegung */
 :root{
@@ -181,7 +186,6 @@ footer h3{font-size:15px;color:var(--text);margin-bottom:8px}
 footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
 footer a{color:var(--text-leise)}
 .adresse{font-family:var(--schrift-zahl);font-size:14px;user-select:all}
-.entwurf{position:fixed;right:max(12px,env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));background:var(--akzent);color:#1A2433;font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;z-index:6}
 
 @media (max-width:900px){
   .held .innen{grid-template-columns:1fr}
@@ -225,7 +229,7 @@ footer a{color:var(--text-leise)}
       <a href="https://help.ablago.app">Hilfe</a>
       <a href="https://catalog.ablago.app">Katalog</a>
       <a href="https://github.com/motom001/dms" class="optional">GitHub</a>
-      <div class="sprache" aria-label="Sprache"><span aria-current="true">DE</span><a href="#oben" title="Englische Fassung folgt">EN</a></div>
+      <div class="sprache" role="group" aria-label="Sprache"><span aria-current="true">DE</span><a href="en/" hreflang="en" lang="en" title="English">EN</a></div>
     </div>
   </div>
 </nav>
@@ -314,7 +318,7 @@ footer a{color:var(--text-leise)}
         <button class="chip" type="button" data-lage="scannen" aria-pressed="false">Viel Papier zum Scannen</button>
       </div>
       <div class="pakete" id="pakete" aria-live="polite"></div>
-      <p class="hinweis">Entwurf: Auf der fertigen Seite kommen die Pakete direkt aus dem <a href="https://catalog.ablago.app">Katalog</a>.</p>
+      <p class="hinweis">Eine Auswahl. Alle Pakete mit Beschreibung findest du im <a href="https://catalog.ablago.app">Paketkatalog</a>.</p>
     </div>
   </section>
 
@@ -325,11 +329,11 @@ footer a{color:var(--text-leise)}
         <h2 id="start">Drei Schritte bis zur ersten Mappe</h2>
       </div>
       <div class="schritte">
-        <div class="schritt"><span class="nr">Schritt 1</span><h3>Gerät wählen</h3><p>Ein NAS, ein kleiner Mini-PC oder ein Raspberry Pi 4 oder 5 genügt. Was wir selbst geprüft haben, steht auf der Seite „Geprüfte Plattformen“.</p></div>
-        <div class="schritt"><span class="nr">Schritt 2</span><h3>Installieren</h3><p>Aus dem App-Store deines Heimservers (umbrelOS, ZimaOS, CasaOS) oder mit Docker Compose. Für den Raspberry Pi gibt es eine Anleitung Schritt für Schritt.</p></div>
+        <div class="schritt"><span class="nr">Schritt 1</span><h3>Gerät wählen</h3><p>Ein NAS, ein kleiner Mini-PC oder ein Raspberry Pi 4 oder 5 genügt. Was wir selbst geprüft haben, steht auf der Seite <a href="https://help.ablago.app/installieren/aktuell/plattformen/">„Geprüfte Plattformen“</a>.</p></div>
+        <div class="schritt"><span class="nr">Schritt 2</span><h3>Installieren</h3><p>Aus dem App-Store deines Heimservers (umbrelOS, ZimaOS, CasaOS) oder mit Docker Compose. Für den Raspberry Pi gibt es eine <a href="https://help.ablago.app/installieren/aktuell/raspberry-pi/">Anleitung Schritt für Schritt</a>.</p></div>
         <div class="schritt"><span class="nr">Schritt 3</span><h3>Pakete auswählen</h3><p>Der Einrichtungsassistent fragt, was dich betrifft, und holt die passenden Pakete. Alle Fragen auf einmal, ein Knopf, fertig.</p></div>
       </div>
-      <div class="knoepfe"><a class="knopf haupt" href="https://help.ablago.app">Zur Installationsanleitung</a></div>
+      <div class="knoepfe"><a class="knopf haupt" href="https://help.ablago.app/installieren/aktuell/">Zur Installationsanleitung</a></div>
     </div>
   </section>
 
@@ -433,7 +437,7 @@ footer a{color:var(--text-leise)}
         <strong>Über diese Seite</strong>
         <p>Diese Seite setzt keine Cookies, nutzt kein Tracking und keine Statistik und lädt nichts von anderen Anbietern. Bilder liegen hier auf der Seite, Schriften kommen von deinem Gerät.</p>
         <p>Sie liegt bei GitHub Pages. GitHub verarbeitet beim Aufruf technisch notwendige Daten wie deine IP-Adresse. Mehr dazu in der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>.</p>
-        <p>Auch der Quellcode dieser Seite ist offen (Apache-2.0).</p>
+        <p>Auch der <a href="https://github.com/motom001/dms-website">Quellcode dieser Seite</a> ist offen (Apache-2.0). Mehr in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
       </div>
     </div>
   </section>
@@ -446,12 +450,10 @@ footer a{color:var(--text-leise)}
       <p style="margin-top:10px">Dokumentenablage für zu Hause und kleine Betriebe.</p>
     </div>
     <div><h3>Ablago</h3><ul><li><a href="https://help.ablago.app">Hilfe und Handbuch</a></li><li><a href="https://catalog.ablago.app">Paketkatalog</a></li><li><a href="https://github.com/motom001/dms">Quellcode</a></li></ul></div>
-    <div><h3>Kontakt</h3><ul><li class="adresse">kontakt@ablago.app</li><li>Sicherheitslücke melden:</li><li class="adresse">security@ablago.app</li></ul></div>
-    <div><h3>Rechtliches</h3><ul><li><a href="#oben">Impressum</a></li><li><a href="#oben">Datenschutz</a></li><li>Code: Apache-2.0</li></ul></div>
+    <div><h3>Kontakt</h3><ul><li class="adresse"><a href="mailto:kontakt@ablago.app">kontakt@ablago.app</a></li><li>Sicherheitslücke melden:</li><li class="adresse"><a href="mailto:security@ablago.app">security@ablago.app</a></li></ul></div>
+    <div><h3>Rechtliches</h3><ul><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li><li>Code: Apache-2.0</li></ul></div>
   </div>
 </footer>
-
-<div class="entwurf">Entwurf</div>
 
 <script>
 (function(){

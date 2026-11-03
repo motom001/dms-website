@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Datenschutz – Ablago</title>
+<meta name="description" content="Datenschutzerklärung der Startseite von Ablago: keine Cookies, kein Tracking.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://ablago.app/datenschutz.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+:root{
+  --blau:#1F4E79; --blau-tief:#163A5B; --akzent:#E8A33D; --akzent-text:#9A5B05;
+  --grund:#F5F7FA; --flaeche:#FFFFFF; --band:#EAF0F6; --linie:#D9E1EA;
+  --text:#1A2433; --text-leise:#4A5668; --kachel:#1F4E79; --auf-kachel:#FFFFFF;
+  --schrift:'Source Sans 3','Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  --schrift-zahl:ui-monospace,'SF Mono','Cascadia Mono',Consolas,monospace;
+  --r:14px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --blau:#8DB8E0; --blau-tief:#B9D3EC; --akzent:#F0B254; --akzent-text:#F0B254;
+  --grund:#0F151D; --flaeche:#17202B; --band:#131C26; --linie:#2A3644;
+  --text:#E6ECF3; --text-leise:#A7B3C2; --kachel:#2A6496; --auf-kachel:#FFFFFF; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --blau:#8DB8E0; --blau-tief:#B9D3EC; --akzent:#F0B254; --akzent-text:#F0B254;
+  --grund:#0F151D; --flaeche:#17202B; --band:#131C26; --linie:#2A3644;
+  --text:#E6ECF3; --text-leise:#A7B3C2; --kachel:#2A6496; --auf-kachel:#FFFFFF; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--grund);color:var(--text);font-family:var(--schrift);font-size:17px;line-height:1.55;margin:0}
+a{color:var(--blau);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--akzent);outline-offset:3px;border-radius:6px}
+.innen{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{text-wrap:balance;line-height:1.2;margin:0}
+h2{font-size:clamp(26px,3.2vw,34px);font-weight:700;letter-spacing:-.2px}
+h3{font-size:20px;font-weight:700}
+p{margin:0}
+.leise{color:var(--text-leise)}
+.vorspann{font-size:13px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;color:var(--akzent-text)}
+section{padding-block:72px}
+.band{background:var(--band)}
+.kopfzeile{display:flex;flex-direction:column;gap:10px;max-width:680px;margin-bottom:36px}
+
+/* Navigation */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--grund)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--grund) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--linie)}
+nav .innen{display:flex;align-items:center;gap:20px;padding-block:12px;flex-wrap:wrap}
+.marke{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:700;font-size:21px}
+.marke svg{flex:none}
+.navlinks{display:flex;gap:20px;margin-left:auto;align-items:center;flex-wrap:wrap;font-size:16px}
+.navlinks a{text-decoration:none;color:var(--text-leise)}
+.navlinks a:hover{color:var(--blau)}
+.sprache{display:flex;border:1px solid var(--linie);border-radius:999px;overflow:hidden;font-size:14px}
+.sprache span,.sprache a{padding:3px 10px}
+.sprache span{background:var(--blau);color:var(--grund);font-weight:700}
+
+/* Kopf */
+.held{padding-block:64px 56px}
+.held .innen{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.held h1{font-size:clamp(44px,6.5vw,76px);font-weight:700;letter-spacing:-1.5px;color:var(--blau-tief)}
+.slogan{font-size:clamp(21px,2.4vw,27px);line-height:1.35;margin-top:14px;max-width:30ch}
+.akronym{margin-top:22px;display:flex;align-items:center;gap:10px;min-height:2.6em}
+.akronym-text{font-size:17px;color:var(--text-leise);transition:opacity .9s ease}
+.akronym-text b{color:var(--blau);font-weight:700}
+.akronym-text.weg{opacity:0}
+.pause{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--linie);background:var(--flaeche);color:var(--text-leise);cursor:pointer;display:grid;place-items:center;padding:0}
+.pause svg{width:12px;height:12px}
+.knoepfe{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.knopf{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:10px;font-weight:700;text-decoration:none;font-size:17px}
+.knopf.haupt{background:var(--kachel);color:var(--auf-kachel)}
+.knopf.haupt:hover{filter:brightness(1.1)}
+.knopf.neben{border:1.5px solid var(--linie);color:var(--text);background:var(--flaeche)}
+.bild{display:grid;place-items:center}
+.bild svg{width:min(320px,80%);height:auto;filter:drop-shadow(0 18px 30px rgba(31,78,121,.18))}
+.blatt{animation:sinken 2.4s cubic-bezier(.25,.8,.3,1) .3s both}
+@keyframes sinken{from{transform:translateY(-34px) rotate(-22deg);opacity:.0}35%{opacity:1}to{transform:none;opacity:1}}
+
+/* Einstiege */
+.einstiege{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.einstieg{background:var(--flaeche);border:1px solid var(--linie);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:14px}
+.einstieg ul{margin:0;padding-left:20px;color:var(--text-leise);display:flex;flex-direction:column;gap:6px}
+.einstieg a{margin-top:auto;font-weight:700;text-decoration:none}
+.einstieg .symbol{width:44px;height:44px;border-radius:12px;background:var(--band);display:grid;place-items:center;color:var(--blau)}
+.einstieg .symbol svg{width:24px;height:24px}
+
+/* Versprechen */
+.vision{font-size:clamp(22px,2.6vw,30px);line-height:1.35;font-weight:600;max-width:34ch;color:var(--blau-tief)}
+.versprechen{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 36px;margin-top:44px}
+.vp{display:flex;flex-direction:column;gap:8px;min-width:0}
+.vp .nr{font-family:var(--schrift-zahl);font-size:14px;color:var(--akzent-text)}
+.vp p{color:var(--text-leise)}
+
+/* Lebenslagen */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1.5px solid var(--linie);background:var(--flaeche);color:var(--text);border-radius:999px;padding:9px 16px;font:inherit;font-size:16px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--kachel);border-color:var(--kachel);color:var(--auf-kachel)}
+.pakete{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:28px}
+.paket{background:var(--flaeche);border:1px solid var(--linie);border-radius:var(--r);padding:18px;display:flex;gap:14px;align-items:flex-start}
+.paket .ic{flex:none;width:40px;height:40px;border-radius:10px;background:var(--kachel);color:var(--auf-kachel);display:grid;place-items:center}
+.paket .ic svg{width:22px;height:22px}
+.paket h3{font-size:17px}
+.paket p{font-size:15px;color:var(--text-leise);margin-top:2px}
+.hinweis{font-size:14px;color:var(--text-leise);margin-top:16px}
+
+/* Schritte */
+.schritte{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s}
+.schritt{border-top:3px solid var(--akzent);padding-top:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.schritt .nr{font-family:var(--schrift-zahl);font-size:14px;color:var(--akzent-text)}
+.schritt p{color:var(--text-leise)}
+.schritt code{font-family:var(--schrift-zahl);font-size:14px;background:var(--band);padding:1px 6px;border-radius:5px}
+
+/* Einblick */
+.einblick{background:var(--flaeche);border:1px solid var(--linie);border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(20,40,70,.08)}
+.leiste{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--linie);font-size:14px;color:var(--text-leise)}
+.leiste .punkt{width:10px;height:10px;border-radius:50%;background:var(--linie)}
+.app{display:grid;grid-template-columns:200px 1fr 1.2fr;min-height:330px;font-size:15px}
+.app>div{padding:16px;min-width:0}
+.app .links{border-right:1px solid var(--linie);display:flex;flex-direction:column;gap:4px}
+.app .links span{padding:6px 10px;border-radius:8px;color:var(--text-leise)}
+.app .links span.an{background:var(--band);color:var(--text);font-weight:600}
+.app .mitte{border-right:1px solid var(--linie);display:flex;flex-direction:column;gap:8px}
+.zeile{padding:10px 12px;border:1px solid var(--linie);border-radius:10px;display:flex;justify-content:space-between;gap:8px}
+.zeile.an{border-color:var(--blau)}
+.frist{font-size:13px;color:var(--akzent-text);font-weight:700;white-space:nowrap}
+.app .rechts{display:flex;flex-direction:column;gap:10px}
+.feld{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--linie);padding-bottom:6px}
+.feld span:first-child{color:var(--text-leise)}
+.zahl{font-variant-numeric:tabular-nums}
+.erinnerung{background:var(--band);border-radius:10px;padding:10px 12px;font-size:14px}
+
+/* Mappen */
+.mappen{display:flex;flex-direction:column;gap:32px}
+.mappen-text{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.mappen-text .punkt{display:flex;gap:12px}
+.mappen-text .punkt b{display:block;color:var(--text)}
+.mappen-text .punkt p{color:var(--text-leise)}
+.mappen-text .marke-nr{flex:none;width:28px;height:28px;border-radius:8px;background:var(--band);color:var(--blau);display:grid;place-items:center;font-weight:700;font-size:15px}
+.netz{width:100%;height:auto;display:block}
+.netz .k rect{fill:var(--flaeche);stroke:var(--linie);stroke-width:1.5}
+.netz .k .art{fill:var(--text-leise);font-size:12px;letter-spacing:.8px;text-transform:uppercase;font-weight:700}
+.netz .k .name{fill:var(--text);font-size:17px;font-weight:600}
+.netz .k.haupt rect{fill:var(--kachel);stroke:var(--kachel)}
+.netz .k.haupt .art{fill:var(--auf-kachel);opacity:.8}
+.netz .k.haupt .name{fill:var(--auf-kachel)}
+.netz .doc rect{fill:var(--akzent);stroke:none}
+.netz .doc text{fill:#1A2433;font-size:13px;font-weight:700}
+.netz .liste rect{fill:var(--grund);stroke:var(--linie);stroke-width:1.5}
+.netz .liste text{fill:var(--text);font-size:13px}
+.netz .liste .mehr{fill:var(--text-leise)}
+.netz .liste .mini{fill:none;stroke:var(--akzent-text);stroke-width:1.5;stroke-linejoin:round}
+.netz .v{stroke:var(--blau);stroke-width:2;fill:none;opacity:.7}
+.netz .v.bezug{stroke-dasharray:6 6}
+.netz .vt{fill:var(--text-leise);font-size:13px}
+.netz-rahmen{background:var(--flaeche);border:1px solid var(--linie);border-radius:18px;padding:24px 32px}
+.baum{display:none;list-style:none;margin:0;padding:0;font-size:16px}
+.baum ul{list-style:none;margin:6px 0 0 18px;padding:0 0 0 14px;border-left:2px solid var(--linie)}
+.baum li{margin:6px 0}
+.baum span{display:inline-block;background:var(--flaeche);border:1px solid var(--linie);border-radius:10px;padding:6px 12px}
+.baum small{display:block;color:var(--text-leise);font-size:12px;text-transform:uppercase;letter-spacing:.8px;font-weight:700}
+.baum > li > span{background:var(--kachel);color:var(--auf-kachel);border-color:var(--kachel)}
+.baum > li > span small{color:var(--auf-kachel);opacity:.8}
+@media (max-width:900px){.mappen-text{grid-template-columns:1fr}.netz{display:none}.netz-legende{display:none}.baum{display:block}.netz-rahmen{padding:16px}}
+
+/* Offen */
+.offen{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.liste{display:flex;flex-direction:column;gap:14px}
+.liste div{display:flex;gap:12px}
+.liste svg{flex:none;width:22px;height:22px;color:var(--blau);margin-top:3px}
+.ehrlich{background:var(--flaeche);border:1px solid var(--linie);border-radius:var(--r);padding:22px;font-size:15px;color:var(--text-leise);display:flex;flex-direction:column;gap:10px}
+.ehrlich strong{color:var(--text)}
+
+/* Fuß */
+footer{border-top:1px solid var(--linie);padding-block:40px;font-size:15px;color:var(--text-leise)}
+footer .innen{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+footer h3{font-size:15px;color:var(--text);margin-bottom:8px}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+footer a{color:var(--text-leise)}
+.adresse{font-family:var(--schrift-zahl);font-size:14px;user-select:all}
+
+@media (max-width:900px){
+  .held .innen{grid-template-columns:1fr}
+  .bild{order:-1}.bild svg{width:180px}
+  .einstiege,.versprechen,.schritte{grid-template-columns:1fr}
+  .offen{grid-template-columns:1fr}
+  .app{grid-template-columns:1fr}.app .links{display:none}.app .mitte{border-right:0;border-bottom:1px solid var(--linie)}
+  footer .innen{grid-template-columns:1fr 1fr}
+  .navlinks{gap:14px;font-size:15px}
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--grund);color:var(--text);font-family:var(--schrift);font-size:17px;line-height:1.6}
+a{color:var(--blau)}
+.innen{max-width:760px;margin:0 auto;padding:32px 16px 64px}
+.kopf{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;text-decoration:none;color:var(--text);margin-bottom:32px}
+h1{font-size:32px;line-height:1.2;margin:0 0 24px}
+h2{font-size:21px;margin:36px 0 8px}
+h3{font-size:18px;margin:24px 0 6px}
+p,ul{margin:0 0 12px}
+address{font-style:normal}
+.leise{color:var(--text-leise);font-size:15px}
+hr{border:0;border-top:1px solid var(--linie);margin:40px 0}
+</style>
+</head>
+<body>
+<div class="innen">
+<a class="kopf" href="./"><svg width="30" height="30" viewBox="0 0 96 96" aria-hidden="true"><rect width="96" height="96" rx="21" fill="var(--kachel)"/><path d="M12 60H28c4 8 11 12 20 12s16-4 20-12H84v16a6 6 0 0 1-6 6H18a6 6 0 0 1-6-6Z" fill="#FFFFFF"/><g transform="rotate(-12 48 32)"><rect x="33" y="12" width="30" height="40" rx="4" fill="#E8A33D"/></g></svg>Ablago</a>
+<main>
+<h1>Datenschutz</h1>
+<p>Kurz gesagt: Diese Seite setzt <strong>keine Cookies</strong>, nutzt <strong>kein Tracking und keine Statistik</strong> und lädt <strong>nichts von anderen Anbietern</strong>. Bilder liegen hier auf der Seite, Schriften kommen von deinem Gerät.</p>
+<h2>Verantwortlich</h2>
+<address>Thomas Meißner<br>Pirnaer Str. 52<br>01809 Heidenau<br>Deutschland<br>E-Mail: <a href="mailto:datenschutz@ablago.app">datenschutz@ablago.app</a></address>
+<h2>Wo diese Seite liegt</h2>
+<p>Die Seite wird über <strong>GitHub Pages</strong> bereitgestellt (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). Beim Aufruf verarbeitet GitHub technisch notwendige Daten, vor allem deine IP-Adresse, Datum und Uhrzeit, die aufgerufene Adresse und Angaben zum Browser, um die Seite auszuliefern und vor Missbrauch zu schützen. Ablago selbst bekommt diese Daten nicht zu sehen und wertet nichts aus.</p>
+<p>Rechtsgrundlage ist unser berechtigtes Interesse, die Seite sicher und zuverlässig bereitzustellen (Art. 6 Abs. 1 lit. f DSGVO). GitHub kann Daten in den USA verarbeiten. Einzelheiten, auch zu den Garantien für die Übermittlung, stehen in der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>.</p>
+<h2>Wenn du uns schreibst</h2>
+<p>Schreibst du an eine Adresse unter ablago.app, verwenden wir deine Nachricht und deine Adresse nur, um dir zu antworten (Art. 6 Abs. 1 lit. b und f DSGVO). Die Postfächer liegen bei der netcup GmbH in Deutschland, die sie in unserem Auftrag betreibt. Nachrichten löschen wir, wenn sie erledigt sind und keine Aufbewahrungspflicht besteht.</p>
+<h2>Ablago selbst</h2>
+<p>Ablago, das Programm, läuft auf deinem eigenen Gerät. Deine Dokumente und Daten bleiben dort. Ablago sendet keine Nutzungsdaten an das Projekt, auch nicht anonym.</p>
+<h2>Deine Rechte</h2>
+<p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO). Schreib dafür an <a href="mailto:datenschutz@ablago.app">datenschutz@ablago.app</a>. Du kannst dich auch bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei der Sächsischen Datenschutz- und Transparenzbeauftragten.</p>
+<p class="leise">Stand: November 2026</p>
+<hr>
+<h2 lang="en">Privacy (English)</h2>
+<div lang="en">
+<p>This site sets <strong>no cookies</strong>, uses <strong>no tracking or analytics</strong> and loads <strong>nothing from third parties</strong>. It is hosted on GitHub Pages; GitHub processes technically necessary data such as your IP address to deliver the page, see the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. If you email us, we only use your message to reply; mailboxes are run by netcup GmbH in Germany. Ablago, the software, runs on your own device and sends no usage data. Controller: Thomas Meißner, Pirnaer Str. 52, 01809 Heidenau, Germany, <a href="mailto:privacy@ablago.app">privacy@ablago.app</a>. You have the rights under Art. 15–21 GDPR and may complain to a supervisory authority.</p>
+</div>
+<p class="leise"><a href="impressum.html">Impressum</a> · <a href="./">Zur Startseite</a></p>
+</main>
+</div>
+</body>
+</html>
