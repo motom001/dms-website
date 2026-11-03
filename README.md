@@ -21,7 +21,8 @@ Quellcode der Startseite von **Ablago**, der Dokumentenablage für zu Hause und 
 |---|---|
 | `index.html` | Startseite (Deutsch) |
 | `favicon.svg`, `favicon.ico`, `apple-touch-icon.png` | Symbole für Browser und Handy |
-| `bilder/` | Logo in mehreren Fassungen |
+| `bilder/` | Bilder der Startseite |
+| `marke/` | **Logo und Farben für alle Repositories** – Dateien, Regeln und Rechte, siehe [marke/README.md](marke/README.md) |
 
 ## Stand
 
