@@ -146,7 +146,10 @@ nav .innen{display:flex;align-items:center;gap:20px;padding-block:12px;flex-wrap
 .mappen-text .punkt p{color:var(--text-leise)}
 .mappen-text .marke-nr{flex:none;width:28px;height:28px;border-radius:8px;background:var(--band);color:var(--blau);display:grid;place-items:center;font-weight:700;font-size:15px}
 .netz{width:100%;height:auto;display:block}
-.netz .k rect{fill:var(--flaeche);stroke:var(--linie);stroke-width:1.5}
+.netz .k rect,.netz .k .reiter{fill:var(--flaeche);stroke:var(--linie);stroke-width:1.5}
+.netz .k.haupt .reiter{fill:var(--kachel);stroke:var(--kachel)}
+.netz-erklaerung{margin:0 0 16px;color:var(--text-leise);font-size:16px}
+.netz-erklaerung b{color:var(--text)}
 .netz .k .art{fill:var(--text-leise);font-size:12px;letter-spacing:.8px;text-transform:uppercase;font-weight:700}
 .netz .k .name{fill:var(--text);font-size:17px;font-weight:600}
 .netz .k.haupt rect{fill:var(--kachel);stroke:var(--kachel)}
@@ -379,7 +382,7 @@ footer a{color:var(--text-leise)}
           <div class="punkt"><span class="marke-nr">2</span><p><b>Mappen verweisen aufeinander.</b>Die Rechnung gehört zum Wartungsvertrag, der Vertrag zur Heizung, die Heizung zum Haus. Kein Dokument liegt doppelt.</p></div>
           <div class="punkt"><span class="marke-nr">3</span><p><b>Von überall findest du alles.</b>Öffnest du das Haus, siehst du Heizung, Verträge und Rechnungen. Öffnest du Lena, siehst du alles, was sie betrifft.</p></div>
         </div>
-        <div class="netz-rahmen"><svg class="netz" viewBox="0 0 1000 520" role="img" aria-labelledby="netz-titel netz-text">
+        <div class="netz-rahmen"><p class="netz-erklaerung">Jeder Kasten ist eine <b>Mappe</b>. Oben steht die Art der Mappe (Person, Haus, Vertrag …), darunter ihr Name. Die Zahl zeigt, wie viele Dokumente darin liegen.</p><svg class="netz" viewBox="0 0 1000 520" role="img" aria-labelledby="netz-titel netz-text">
 <title id="netz-titel">Beispiel: verbundene Mappen rund um das Haus</title>
 <desc id="netz-text">Die Mappe Unser Haus ist mit der Heizung verbunden, die Heizung mit dem Wartungsvertrag, der Wartungsvertrag mit der Rechnung. Die Gebäudeversicherung gehört zum Haus, Lena ist Versicherungsnehmerin. Die Rechnung stammt vom Heizungsbau Beispiel.</desc>
 <path class="v" d="M700 72 C 620 72, 620 190, 600 190"/>
@@ -394,13 +397,13 @@ footer a{color:var(--text-leise)}
 <text class="vt" x="338" y="306">versichert</text>
 <text class="vt" x="155" y="230">Versicherungs-</text><text class="vt" x="155" y="247">nehmerin</text>
 <text class="vt" x="560" y="416">Absender</text>
-<g class="k"><rect x="40" y="72" width="210" height="64" rx="12"/><text class="art" x="56" y="96">Person</text><text class="name" x="56" y="120">Lena</text></g>
-<g class="k"><rect x="40" y="310" width="210" height="64" rx="12"/><text class="art" x="56" y="334">Versicherung</text><text class="name" x="56" y="358">Gebäudeversicherung</text></g>
-<g class="k haupt"><rect x="390" y="190" width="210" height="64" rx="12"/><text class="art" x="406" y="214">Haus</text><text class="name" x="406" y="238">Unser Haus</text></g>
-<g class="k"><rect x="700" y="40" width="210" height="64" rx="12"/><text class="art" x="716" y="64">Anlage</text><text class="name" x="716" y="88">Heizung</text></g>
-<g class="k"><rect x="700" y="175" width="210" height="64" rx="12"/><text class="art" x="716" y="199">Vertrag</text><text class="name" x="716" y="223">Wartungsvertrag</text></g>
-<g class="k"><rect x="700" y="310" width="210" height="64" rx="12"/><text class="art" x="716" y="334">Rechnung</text><text class="name" x="716" y="358">Wartung 2026</text></g>
-<g class="k"><rect x="310" y="360" width="210" height="64" rx="12"/><text class="art" x="326" y="384">Organisation</text><text class="name" x="326" y="408">Heizungsbau Beispiel</text></g>
+<g class="k"><path class="reiter" d="M54 74V66q0-4 4-4h44q3 0 5 3l6 9Z"/><rect x="40" y="72" width="210" height="64" rx="12"/><text class="art" x="56" y="96">Person</text><text class="name" x="56" y="120">Lena</text></g>
+<g class="k"><path class="reiter" d="M54 312V304q0-4 4-4h44q3 0 5 3l6 9Z"/><rect x="40" y="310" width="210" height="64" rx="12"/><text class="art" x="56" y="334">Versicherung</text><text class="name" x="56" y="358">Gebäudeversicherung</text></g>
+<g class="k haupt"><path class="reiter" d="M404 192V184q0-4 4-4h44q3 0 5 3l6 9Z"/><rect x="390" y="190" width="210" height="64" rx="12"/><text class="art" x="406" y="214">Haus</text><text class="name" x="406" y="238">Unser Haus</text></g>
+<g class="k"><path class="reiter" d="M714 42V34q0-4 4-4h44q3 0 5 3l6 9Z"/><rect x="700" y="40" width="210" height="64" rx="12"/><text class="art" x="716" y="64">Anlage</text><text class="name" x="716" y="88">Heizung</text></g>
+<g class="k"><path class="reiter" d="M714 177V169q0-4 4-4h44q3 0 5 3l6 9Z"/><rect x="700" y="175" width="210" height="64" rx="12"/><text class="art" x="716" y="199">Vertrag</text><text class="name" x="716" y="223">Wartungsvertrag</text></g>
+<g class="k"><path class="reiter" d="M714 312V304q0-4 4-4h44q3 0 5 3l6 9Z"/><rect x="700" y="310" width="210" height="64" rx="12"/><text class="art" x="716" y="334">Rechnung</text><text class="name" x="716" y="358">Wartung 2026</text></g>
+<g class="k"><path class="reiter" d="M324 362V354q0-4 4-4h44q3 0 5 3l6 9Z"/><rect x="310" y="360" width="210" height="64" rx="12"/><text class="art" x="326" y="384">Organisation</text><text class="name" x="326" y="408">Heizungsbau Beispiel</text></g>
 <g class="doc"><rect x="860" y="185" width="40" height="22" rx="6"/><path d="M868 190h7l3 3v9h-10Z" fill="none" stroke="#1A2433" stroke-width="1.6" stroke-linejoin="round"/><text x="883" y="201">2</text></g><g class="doc"><rect x="860" y="320" width="40" height="22" rx="6"/><path d="M868 325h7l3 3v9h-10Z" fill="none" stroke="#1A2433" stroke-width="1.6" stroke-linejoin="round"/><text x="883" y="336">7</text></g><g class="doc"><rect x="200" y="320" width="40" height="22" rx="6"/><path d="M208 325h7l3 3v9h-10Z" fill="none" stroke="#1A2433" stroke-width="1.6" stroke-linejoin="round"/><text x="223" y="336">3</text></g>
 <g class="liste"><path class="v" d="M805 374 L805 392"/><rect x="700" y="392" width="210" height="118" rx="12"/><path d="M716 405h6l3 3v8h-9Z" class="mini"/><text x="732" y="416">Rechnung.pdf</text><path d="M716 425h6l3 3v8h-9Z" class="mini"/><text x="732" y="436">Lieferschein.pdf</text><path d="M716 445h6l3 3v8h-9Z" class="mini"/><text x="732" y="456">Abnahmeprotokoll.pdf</text><path d="M716 465h6l3 3v8h-9Z" class="mini"/><text x="732" y="476">Foto Typenschild.jpg</text><text x="732" y="496" class="mehr">+ 3 weitere</text></g>
 </svg>
@@ -409,9 +412,9 @@ footer a{color:var(--text-leise)}
 <ul>
 <li><span><small>Anlage</small>Heizung</span>
 <ul><li><span><small>Vertrag</small>Wartungsvertrag</span>
-<ul><li><span><small>Rechnung · 7 Dokumente</small>Wartung 2026</span> <span><small>Absender</small>Heizungsbau Beispiel</span></li></ul></li></ul></li>
+<ul><li><span><small>Rechnung · 7 Dokumente</small>Wartung 2026</span> <span><small>Organisation · Absender</small>Heizungsbau Beispiel</span></li></ul></li></ul></li>
 <li><span><small>Versicherung</small>Gebäudeversicherung</span>
-<ul><li><span><small>Versicherungsnehmerin</small>Lena</span></li></ul></li>
+<ul><li><span><small>Person · Versicherungsnehmerin</small>Lena</span></li></ul></li>
 </ul></li></ul></div>
       </div>
       <p class="hinweis netz-legende">Durchgezogene Linie: gehört dazu. Gestrichelt: hat Bezug zu. Orange Zahl: so viele Dokumente liegen in der Mappe, beliebig viele.</p>
