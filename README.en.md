@@ -14,6 +14,10 @@ Source of the website of **Ablago**, the document archive for homes and small bu
 - **GitHub Pages**, as the host, processes technically necessary data such as the IP address. The page says so openly.
 - **Accessible** and **light/dark** following the device setting.
 
+## Logo and colours
+
+The folder [`marke/`](marke/README.en.md) holds all logo files, colours and usage rules. All other Ablago repositories take them from there.
+
 ## Status
 
 First draft, German only for now. An English version (`/en/`), pages per audience, imprint and privacy notice, and packages loaded live from the catalog will follow.
