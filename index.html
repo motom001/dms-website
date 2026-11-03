@@ -148,7 +148,11 @@ nav .innen{display:flex;align-items:center;gap:20px;padding-block:12px;flex-wrap
 .netz .k.haupt .art{fill:var(--auf-kachel);opacity:.8}
 .netz .k.haupt .name{fill:var(--auf-kachel)}
 .netz .doc rect{fill:var(--akzent);stroke:none}
-.netz .doc text{fill:#1A2433;font-size:11px;font-weight:700}
+.netz .doc text{fill:#1A2433;font-size:13px;font-weight:700}
+.netz .liste rect{fill:var(--grund);stroke:var(--linie);stroke-width:1.5}
+.netz .liste text{fill:var(--text);font-size:13px}
+.netz .liste .mehr{fill:var(--text-leise)}
+.netz .liste .mini{fill:none;stroke:var(--akzent-text);stroke-width:1.5;stroke-linejoin:round}
 .netz .v{stroke:var(--blau);stroke-width:2;fill:none;opacity:.7}
 .netz .v.bezug{stroke-dasharray:6 6}
 .netz .vt{fill:var(--text-leise);font-size:13px}
@@ -367,11 +371,11 @@ footer a{color:var(--text-leise)}
       </div>
       <div class="mappen">
         <div class="mappen-text">
-          <div class="punkt"><span class="marke-nr">1</span><p><b>Jede Sache bekommt eine Mappe.</b>Das Haus, die Heizung, der Wartungsvertrag, die Rechnung. Jede Mappe weiß, was sie ist, und hat passende Felder und Fristen.</p></div>
+          <div class="punkt"><span class="marke-nr">1</span><p><b>Jede Sache bekommt eine Mappe.</b>Das Haus, die Heizung, der Wartungsvertrag, die Rechnung. In eine Mappe kommen so viele Dokumente, wie dazugehören: Rechnung, Lieferschein, Abnahmeprotokoll, Fotos.</p></div>
           <div class="punkt"><span class="marke-nr">2</span><p><b>Mappen verweisen aufeinander.</b>Die Rechnung gehört zum Wartungsvertrag, der Vertrag zur Heizung, die Heizung zum Haus. Kein Dokument liegt doppelt.</p></div>
           <div class="punkt"><span class="marke-nr">3</span><p><b>Von überall findest du alles.</b>Öffnest du das Haus, siehst du Heizung, Verträge und Rechnungen. Öffnest du Lena, siehst du alles, was sie betrifft.</p></div>
         </div>
-        <div class="netz-rahmen"><svg class="netz" viewBox="0 0 1000 430" role="img" aria-labelledby="netz-titel netz-text">
+        <div class="netz-rahmen"><svg class="netz" viewBox="0 0 1000 520" role="img" aria-labelledby="netz-titel netz-text">
 <title id="netz-titel">Beispiel: verbundene Mappen rund um das Haus</title>
 <desc id="netz-text">Die Mappe Unser Haus ist mit der Heizung verbunden, die Heizung mit dem Wartungsvertrag, der Wartungsvertrag mit der Rechnung. Die Gebäudeversicherung gehört zum Haus, Lena ist Versicherungsnehmerin. Die Rechnung stammt vom Heizungsbau Beispiel.</desc>
 <path class="v" d="M700 72 C 620 72, 620 190, 600 190"/>
@@ -393,19 +397,20 @@ footer a{color:var(--text-leise)}
 <g class="k"><rect x="700" y="175" width="210" height="64" rx="12"/><text class="art" x="716" y="199">Vertrag</text><text class="name" x="716" y="223">Wartungsvertrag</text></g>
 <g class="k"><rect x="700" y="310" width="210" height="64" rx="12"/><text class="art" x="716" y="334">Rechnung</text><text class="name" x="716" y="358">Wartung 2026</text></g>
 <g class="k"><rect x="310" y="360" width="210" height="64" rx="12"/><text class="art" x="326" y="384">Organisation</text><text class="name" x="326" y="408">Heizungsbau Beispiel</text></g>
-<g class="doc"><rect x="866" y="185" width="34" height="20" rx="5"/><text x="873" y="199">PDF</text></g><g class="doc"><rect x="866" y="320" width="34" height="20" rx="5"/><text x="873" y="334">PDF</text></g><g class="doc"><rect x="206" y="320" width="34" height="20" rx="5"/><text x="213" y="334">PDF</text></g>
+<g class="doc"><rect x="860" y="185" width="40" height="22" rx="6"/><path d="M868 190h7l3 3v9h-10Z" fill="none" stroke="#1A2433" stroke-width="1.6" stroke-linejoin="round"/><text x="883" y="201">2</text></g><g class="doc"><rect x="860" y="320" width="40" height="22" rx="6"/><path d="M868 325h7l3 3v9h-10Z" fill="none" stroke="#1A2433" stroke-width="1.6" stroke-linejoin="round"/><text x="883" y="336">7</text></g><g class="doc"><rect x="200" y="320" width="40" height="22" rx="6"/><path d="M208 325h7l3 3v9h-10Z" fill="none" stroke="#1A2433" stroke-width="1.6" stroke-linejoin="round"/><text x="223" y="336">3</text></g>
+<g class="liste"><path class="v" d="M805 374 L805 392"/><rect x="700" y="392" width="210" height="118" rx="12"/><path d="M716 405h6l3 3v8h-9Z" class="mini"/><text x="732" y="416">Rechnung.pdf</text><path d="M716 425h6l3 3v8h-9Z" class="mini"/><text x="732" y="436">Lieferschein.pdf</text><path d="M716 445h6l3 3v8h-9Z" class="mini"/><text x="732" y="456">Abnahmeprotokoll.pdf</text><path d="M716 465h6l3 3v8h-9Z" class="mini"/><text x="732" y="476">Foto Typenschild.jpg</text><text x="732" y="496" class="mehr">+ 3 weitere</text></g>
 </svg>
 <ul class="baum" aria-label="Beispiel: verbundene Mappen rund um das Haus">
 <li><span><small>Haus</small>Unser Haus</span>
 <ul>
 <li><span><small>Anlage</small>Heizung</span>
 <ul><li><span><small>Vertrag</small>Wartungsvertrag</span>
-<ul><li><span><small>Rechnung</small>Wartung 2026</span> <span><small>Absender</small>Heizungsbau Beispiel</span></li></ul></li></ul></li>
+<ul><li><span><small>Rechnung · 7 Dokumente</small>Wartung 2026</span> <span><small>Absender</small>Heizungsbau Beispiel</span></li></ul></li></ul></li>
 <li><span><small>Versicherung</small>Gebäudeversicherung</span>
 <ul><li><span><small>Versicherungsnehmerin</small>Lena</span></li></ul></li>
 </ul></li></ul></div>
       </div>
-      <p class="hinweis netz-legende">Durchgezogene Linie: gehört dazu. Gestrichelt: hat Bezug zu. Orange Markierung: Dokument in der Mappe.</p>
+      <p class="hinweis netz-legende">Durchgezogene Linie: gehört dazu. Gestrichelt: hat Bezug zu. Orange Zahl: so viele Dokumente liegen in der Mappe, beliebig viele.</p>
     </div>
   </section>
 
