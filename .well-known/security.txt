@@ -1,6 +1,9 @@
-Contact: mailto:security@ablago.app
+# Sicherheitslücke gefunden? Bitte vertraulich melden – am liebsten über GitHub, sonst per E-Mail.
+# Found a vulnerability? Please report it privately – preferably via GitHub, otherwise by email.
 Contact: https://github.com/motom001/dms/security/advisories/new
-Expires: 2027-11-03T23:00:00.000Z
+Contact: mailto:security@ablago.app
+Expires: 2027-10-31T23:00:00.000Z
 Preferred-Languages: de, en
 Canonical: https://ablago.app/.well-known/security.txt
+Canonical: https://www.ablago.app/.well-known/security.txt
 Policy: https://github.com/motom001/dms/blob/main/SECURITY.md
