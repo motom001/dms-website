@@ -5,5 +5,4 @@ Contact: mailto:security@ablago.app
 Expires: 2027-10-31T23:00:00.000Z
 Preferred-Languages: de, en
 Canonical: https://ablago.app/.well-known/security.txt
-Canonical: https://www.ablago.app/.well-known/security.txt
 Policy: https://github.com/motom001/dms/blob/main/SECURITY.md
